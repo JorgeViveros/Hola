@@ -18326,7 +18326,7 @@ exports.default = App;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -18344,31 +18344,44 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Video = function (_Component) {
-	_inherits(Video, _Component);
+  _inherits(Video, _Component);
 
-	function Video() {
-		_classCallCheck(this, Video);
+  function Video() {
+    _classCallCheck(this, Video);
 
-		return _possibleConstructorReturn(this, (Video.__proto__ || Object.getPrototypeOf(Video)).apply(this, arguments));
-	}
+    return _possibleConstructorReturn(this, (Video.__proto__ || Object.getPrototypeOf(Video)).apply(this, arguments));
+  }
 
-	_createClass(Video, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				null,
-				_react2.default.createElement(
-					"h1",
-					null,
-					"iFrame youtube"
-				),
-				_react2.default.createElement("iframe", { width: "420", height: "315", src: "https://www.youtube.com/embed/tgbNymZ7vqY" })
-			);
-		}
-	}]);
+  _createClass(Video, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "h1",
+          null,
+          "iFrame youtube"
+        ),
+        _react2.default.createElement(
+          "video",
+          {
+            id: "video",
+            "class": "video-js",
+            controls: true, preload: "auto",
+            "data-setup": "{}" },
+          _react2.default.createElement("source", { src: "//vjs.zencdn.net/v/oceans.mp4", type: "video/mp4" }),
+          _react2.default.createElement(
+            "p",
+            { "class": "vjs-no-js" },
+            "To view this video please enable JavaScript, and consider upgrading to a web browser that"
+          )
+        )
+      );
+    }
+  }]);
 
-	return Video;
+  return Video;
 }(_react.Component);
 
 exports.default = Video;
