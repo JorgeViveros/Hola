@@ -9,6 +9,7 @@ class Video extends Component{
     		id="video"
     		class="video-js"
     		controls preload="auto"
+    		controlsList="nodownload"
     		data-setup='{}'>
   <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
   <p class="vjs-no-js">
