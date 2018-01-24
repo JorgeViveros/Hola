@@ -5,7 +5,18 @@ class Video extends Component{
 		return(
 		<div>
 			<h1>iFrame youtube</h1>
-			<iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+			<video
+    		id="video"
+    		class="video-js"
+    		controls preload="auto"
+    		data-setup='{}'>
+  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a
+    web browser that
+    
+  </p>
+</video>
 		</div>
 		)
 	}
