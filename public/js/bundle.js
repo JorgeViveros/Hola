@@ -18371,7 +18371,7 @@ var Video = function (_Component) {
             controls: true, preload: "auto",
             controlsList: "nodownload",
             "data-setup": "{}" },
-          _react2.default.createElement("source", { src: "//vjs.zencdn.net/v/oceans.mp4", type: "video/mp4" }),
+          _react2.default.createElement("source", { src: "videos/videoplayback.mp4", type: "video/mp4" }),
           _react2.default.createElement(
             "p",
             { "class": "vjs-no-js" },
