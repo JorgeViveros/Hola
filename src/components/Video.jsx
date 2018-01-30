@@ -4,7 +4,7 @@ class Video extends Component{
 	render(){
 		return(
 		<div>
-			<h1>iFrame youtube</h1>
+			<h1>iFrame Saulo el mero mero</h1>
 			<video
     		id="video"
     		class="video-js"
