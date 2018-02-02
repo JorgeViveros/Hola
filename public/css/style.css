@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>	
-	<title>Suscripcion Videos Materno Fetal</title>
-</head>
-  <link rel="stylesheet" type="text/css" href="dist/video-js.css">
-  <script src="dist/video.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.12.2/videojs-contrib-hls.js"></script>
-<body>
-<div id="app"></div>
-<style>
 .video-js {
   font-size: 10px;
   color: #fff;
@@ -28,7 +17,7 @@
   top: 40%;
   margin-left: -1.55em;
   margin-top: -1.1em;
-  background-image: url("img/logo-player.png");
+  background-image: url("../img/logo-player.png");
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: none !important; // @stylint ignore
@@ -72,8 +61,3 @@
   /* Otherwise we'll rely on stacked opacities */
   background: rgba(115, 133, 159, 0.75);
 }
-</style>
-<div id="video"></div>
-<script src="js/bundle.js"></script>
-</body>
-</html>

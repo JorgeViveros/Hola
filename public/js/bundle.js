@@ -18359,23 +18359,23 @@ var Video = function (_Component) {
         "div",
         null,
         _react2.default.createElement(
-          "h1",
+          "h4",
           null,
-          "iFrame youtube"
+          "Video 1"
         ),
         _react2.default.createElement(
           "video",
           {
             id: "video",
-            "class": "video-js",
+            "class": "video-js vjs-default-skin",
             controls: true, preload: "auto",
             controlsList: "nodownload",
             "data-setup": "{}" },
-          _react2.default.createElement("source", { src: "videos/videoplayback.mp4", type: "video/mp4" }),
+          _react2.default.createElement("source", { src: "videos/salida.m3u8", type: "application/x-mpegURL" }),
           _react2.default.createElement(
             "p",
             { "class": "vjs-no-js" },
-            "To view this video please enable JavaScript, and consider upgrading to a web browser that"
+            "Prueba"
           )
         )
       );

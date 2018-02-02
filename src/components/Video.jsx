@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
 
 class Video extends Component{
-	render(){
-		return(
-		<div>
-			<h1>iFrame Saulo el mero mero</h1>
-			<video
-    		id="video"
-    		class="video-js"
-    		controls preload="auto"
-    		controlsList="nodownload"
-    		data-setup='{}'>
-  <source src="videos/videoplayback.mp4" type="video/mp4"></source>
+  render(){
+    return(
+    <div>
+      <h4>Video 1</h4>
+      <video
+        id="video"
+        class="video-js vjs-default-skin"
+        controls preload="auto"
+        controlsList="nodownload"
+        data-setup='{}'>
+  <source src="videos/salida.m3u8" type="application/x-mpegURL"></source>
   <p class="vjs-no-js">
-    To view this video please enable JavaScript, and consider upgrading to a
-    web browser that
-    
+    Prueba
   </p>
 </video>
-		</div>
-		)
-	}
+    </div>
+    )
+  }
 }
 
 export default Video;
