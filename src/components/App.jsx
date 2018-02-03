@@ -3,7 +3,22 @@ import React, { Component } from 'react';
 class App extends Component{
 	render(){
 		return(
-			<h1>Materno Fetal Videos</h1>
+			[
+			    {
+			        nombre: 'Video-1',
+			        titulo: 'Medicina Fetal Apartado 1'
+			    },
+			    {
+			        nombre: 'Video-2',
+			        titulo: 'Medicina Fetal Apartado 2'
+			    }
+			].map((anObjectMapped, index) => {
+			    return (
+			        <h3 key={`${anObjectMapped.nombre}_{anObjectMapped.titulo}`}>
+			            {anObjectMapped.nombre} - {anObjectMapped.titulo}
+			        </h3>
+			    );
+			})
 		)
 	}
 }

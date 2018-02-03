@@ -1,0 +1,99 @@
+.phantom_grid{
+  display: none;
+  @include gridle_container();
+  @include gridle ( 12 );
+  @include gridle_parent ( );
+  max-width : 960px;
+  margin : 0 auto;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top:-12px;
+  z-index: 1000;
+  pointer-events: none;
+  right: 0;
+  ul{
+    @include gridle ( 12 );
+    @include gridle_parent ( );
+    height: 100%;
+
+    li{
+      @include gridle ( 1 );
+      height: 100%;
+
+    }
+    li:nth-child(odd) {
+        background: rgba(116,233,0,0.2);
+    }
+    li:nth-child(even) {
+        background: rgba(190,247,129,0.3);
+    }
+  
+  }
+}
+
+
+form .row{
+  margin-bottom: 10px;
+}
+
+
+.diploma{
+  width: 1650px;
+  height: 1275px;
+  position: relative;
+}
+
+.diploma img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+.diploma .titular{
+  position: absolute;
+  margin-left: 14%;
+  margin-right: 14%;
+  width: 72%;
+  text-align: center;
+  font-size: 5.5em;
+  line-height: 102%;
+  top: 365px;
+}
+
+.gafete{
+  width: 610px;
+  height: 400px;
+  position: relative;
+  outline: 2px dotted black;
+  outline-offset: -12px;
+}
+
+.gafete img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+.gafete .titular{
+  position: absolute;
+  margin-left: 8%;
+  margin-right: 8%;
+  width: 84%;
+  text-align: center;
+  font-size: 4em;
+  top: 160px;
+  line-height: 1em;
+  color: black;
+}
+
+.gafete .dn{
+  position: absolute;
+  width: 30%;
+  margin-right: 70%;
+  text-align: center;
+  font-size: 1.8em;
+  top: 332px;
+  line-height: 1em;
+  color: black;
+}

@@ -4,12 +4,20 @@
 	<title>Suscripcion Videos Materno Fetal</title>
 </head>
   <link rel="stylesheet" type="text/css" href="dist/video-js.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="dist/video.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.12.2/videojs-contrib-hls.js"></script>
 <body>
-<div id="app"></div>
-<div id="video"></div>
+<div class="col-xs-3 col-sm-3 col-md-3">
+  <div id="app"></div>
+</div>
+<div class="col-xs-9 col-sm-9 col-md-9">
+  <div id="video" class="embed-responsive embed-responsive-16by9"></div>
+</div>
 <script src="js/bundle.js"></script>
 </body>
 </html>

@@ -4,17 +4,14 @@ class Video extends Component{
   render(){
     return(
     <div>
-      <h4>Video 1</h4>
+      <center><h4>Video 1</h4></center>
       <video
         id="video"
-        class="video-js vjs-default-skin"
+        class="video-js vjs-default-skin col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2"
         controls preload="auto"
         controlsList="nodownload"
         data-setup='{}'>
   <source src="videos/salida.m3u8" type="application/x-mpegURL"></source>
-  <p class="vjs-no-js">
-    Prueba
-  </p>
 </video>
     </div>
     )

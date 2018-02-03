@@ -7,11 +7,11 @@
   font-size: 3em;
   color: rgba(0,0,0,0);
   line-height: 2.2em;
-  height: 3.2em;
-  width: 3.2em;
-  border: 0.1em solid #fff;
+  height: 3.6em;
+  width: 3.6em;
+  border: 0.2em solid #fff;
   /* 0.3em = 9px default */
-  border-radius: 1.6em;
+  border-radius: 1.8em;
   /* Align center */
   left: 50%;
   top: 40%;
@@ -21,13 +21,12 @@
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: none !important; // @stylint ignore
-      
 }
 
 .video-js:hover .vjs-control-bar,
 .video-js:hover .vjs-big-play-button,
 .video-js:hover .vjs-menu-button .vjs-menu-content {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .video-js .vjs-control-bar,
@@ -36,16 +35,30 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
-/* Slider - used for Volume bar and Progress bar */
+.vjs-big-play-button,
+.vjs-big-play-button:focus {
+        outline: 0;
+        opacity: 0;
+
+        /* transition */
+        -webkit-transition: all 0s;
+        -moz-transition: all 0s;
+        -o-transition: all 0s;
+        transition: all 0s;
+}
+
+.video-js:hover .vjs-control-bar{
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .video-js .vjs-slider {
-  background-color: #73859f;
   background-color: rgba(0, 0, 0, 0);
 }
 
 .video-js .vjs-volume-level,
 .video-js .vjs-play-progress,
 .video-js .vjs-slider-bar {
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
 }
 
 .video-js .vjs-load-progress {

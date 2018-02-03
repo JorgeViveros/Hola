@@ -18305,11 +18305,21 @@ var App = function (_Component) {
 	_createClass(App, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement(
-				'h1',
-				null,
-				'Materno Fetal Videos'
-			);
+			return [{
+				nombre: 'Video-1',
+				titulo: 'Medicina Fetal Apartado 1'
+			}, {
+				nombre: 'Video-2',
+				titulo: 'Medicina Fetal Apartado 2'
+			}].map(function (anObjectMapped, index) {
+				return _react2.default.createElement(
+					'h3',
+					{ key: anObjectMapped.nombre + '_{anObjectMapped.titulo}' },
+					anObjectMapped.nombre,
+					' - ',
+					anObjectMapped.titulo
+				);
+			});
 		}
 	}]);
 
@@ -18359,24 +18369,23 @@ var Video = function (_Component) {
         "div",
         null,
         _react2.default.createElement(
-          "h4",
+          "center",
           null,
-          "Video 1"
+          _react2.default.createElement(
+            "h4",
+            null,
+            "Video 1"
+          )
         ),
         _react2.default.createElement(
           "video",
           {
             id: "video",
-            "class": "video-js vjs-default-skin",
+            "class": "video-js vjs-default-skin col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1",
             controls: true, preload: "auto",
             controlsList: "nodownload",
             "data-setup": "{}" },
-          _react2.default.createElement("source", { src: "videos/salida.m3u8", type: "application/x-mpegURL" }),
-          _react2.default.createElement(
-            "p",
-            { "class": "vjs-no-js" },
-            "Prueba"
-          )
+          _react2.default.createElement("source", { src: "videos/salida.m3u8", type: "application/x-mpegURL" })
         )
       );
     }
