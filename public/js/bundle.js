@@ -18313,7 +18313,7 @@ var App = function (_Component) {
 				titulo: 'Medicina Fetal Apartado 2'
 			}].map(function (anObjectMapped, index) {
 				return _react2.default.createElement(
-					'h3',
+					'h2',
 					{ key: anObjectMapped.nombre + '_{anObjectMapped.titulo}' },
 					anObjectMapped.nombre,
 					' - ',
@@ -18374,14 +18374,14 @@ var Video = function (_Component) {
           _react2.default.createElement(
             "h4",
             null,
-            "Video 1"
+            "Video-1"
           )
         ),
         _react2.default.createElement(
           "video",
           {
             id: "video",
-            "class": "video-js vjs-default-skin col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1",
+            "class": "video-js vjs-default-skin col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2",
             controls: true, preload: "auto",
             controlsList: "nodownload",
             "data-setup": "{}" },

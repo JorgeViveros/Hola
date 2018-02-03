@@ -14,9 +14,9 @@ class App extends Component{
 			    }
 			].map((anObjectMapped, index) => {
 			    return (
-			        <h3 key={`${anObjectMapped.nombre}_{anObjectMapped.titulo}`}>
+			        <h2 key={`${anObjectMapped.nombre}_{anObjectMapped.titulo}`}>
 			            {anObjectMapped.nombre} - {anObjectMapped.titulo}
-			        </h3>
+			        </h2>
 			    );
 			})
 		)
