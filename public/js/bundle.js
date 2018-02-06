@@ -258,6 +258,21 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(15);
+} else {
+  module.exports = __webpack_require__(16);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
 /**
@@ -294,21 +309,6 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
-} else {
-  module.exports = __webpack_require__(16);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -506,7 +506,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -682,7 +682,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -940,25 +940,65 @@ module.exports = focusNode;
 "use strict";
 
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(18);
 
-var _App = __webpack_require__(27);
+var _Contenido = __webpack_require__(27);
 
-var _App2 = _interopRequireDefault(_App);
+var _Contenido2 = _interopRequireDefault(_Contenido);
 
 var _Video = __webpack_require__(28);
 
 var _Video2 = _interopRequireDefault(_Video);
 
+var _Carrusel = __webpack_require__(29);
+
+var _Carrusel2 = _interopRequireDefault(_Carrusel);
+
+var _VideoWrapper = __webpack_require__(30);
+
+var _VideoWrapper2 = _interopRequireDefault(_VideoWrapper);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
+(0, _reactDom.render)(_react2.default.createElement(_VideoWrapper2.default, null), document.getElementById('videowrapper'));
 
-(0, _reactDom.render)(_react2.default.createElement(_Video2.default, null), document.getElementById('video'));
+var data = [{
+	id: 0,
+	header: 'Gluten-free Bicycle',
+	body: 'Chillwave knausgaard chambray flannel tumblr, narwhal microdosing blog...',
+	colour: '#242846',
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc1.jpg'
+}, {
+	id: 1,
+	header: 'Post-ironic Disrupt',
+	body: 'Swag biodiesel disrupt retro fashion, salvia food truck kitsch wolf DIY...',
+	colour: '#ba9077',
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc2.jpg'
+}, {
+	id: 2,
+	header: 'Lumber-Sexual Roof Party ',
+	body: 'Flexitarian 3 wolf moon cliche, migas scenester street art...',
+	colour: '#1ABC9C',
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc3.jpg'
+}, {
+	id: 3,
+	header: 'Vegan hoodie trust fund',
+	body: 'Farm-to-table tousled try-hard, normcore ethical tilde iPhone...',
+	colour: '#C0392B',
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc4.jpg'
+}, {
+	id: 4,
+	header: 'cliche craft beer',
+	body: 'Tote bag flannel normcore polaroid +1. Quinoa actually 90s sustainable...',
+	colour: '#513B56',
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc5.jpg'
+}];
+
+(0, _reactDom.render)(_react2.default.createElement(_Carrusel2.default, { data: data }), document.getElementById('carrusel'));
 
 /***/ }),
 /* 15 */
@@ -974,7 +1014,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(1),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(2),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -1014,7 +1054,7 @@ var _assign = __webpack_require__(3);
 var emptyObject = __webpack_require__(4);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var checkPropTypes = __webpack_require__(7);
 
 // TODO: this is special because it gets imported during build.
@@ -2435,7 +2475,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(2),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(1),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(4);
+var aa=__webpack_require__(1),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(2),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(4);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -2732,12 +2772,12 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(2);
+var React = __webpack_require__(1);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
 var ExecutionEnvironment = __webpack_require__(8);
 var _assign = __webpack_require__(3);
-var emptyFunction = __webpack_require__(1);
+var emptyFunction = __webpack_require__(2);
 var EventListener = __webpack_require__(9);
 var getActiveElement = __webpack_require__(10);
 var shallowEqual = __webpack_require__(11);
@@ -18281,7 +18321,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -18293,16 +18333,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var App = function (_Component) {
-	_inherits(App, _Component);
+var Contenido = function (_Component) {
+	_inherits(Contenido, _Component);
 
-	function App() {
-		_classCallCheck(this, App);
+	function Contenido() {
+		_classCallCheck(this, Contenido);
 
-		return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (Contenido.__proto__ || Object.getPrototypeOf(Contenido)).apply(this, arguments));
 	}
 
-	_createClass(App, [{
+	_createClass(Contenido, [{
 		key: 'render',
 		value: function render() {
 			return [{
@@ -18323,10 +18363,10 @@ var App = function (_Component) {
 		}
 	}]);
 
-	return App;
+	return Contenido;
 }(_react.Component);
 
-exports.default = App;
+exports.default = Contenido;
 
 /***/ }),
 /* 28 */
@@ -18341,7 +18381,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
+var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -18381,7 +18421,7 @@ var Video = function (_Component) {
           "video",
           {
             id: "video",
-            "class": "video-js vjs-default-skin col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2",
+            className: "video-js vjs-default-skin col-xs-12 col-sm-12 col-md-12",
             controls: true, preload: "auto",
             controlsList: "nodownload",
             "data-setup": "{}" },
@@ -18395,6 +18435,315 @@ var Video = function (_Component) {
 }(_react.Component);
 
 exports.default = Video;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Carrusel = function (_Component) {
+	_inherits(Carrusel, _Component);
+
+	function Carrusel(props) {
+		_classCallCheck(this, Carrusel);
+
+		var _this = _possibleConstructorReturn(this, (Carrusel.__proto__ || Object.getPrototypeOf(Carrusel)).call(this, props));
+
+		_this.state = {
+			activeID: 0,
+			wrapperStyle: {
+				backgroundImage: 'url(\'' + _this.props.data[0].img + '\')'
+			},
+			panelStyle: {
+				background: _this.props.data[0].colour
+			},
+			videoStyle: {
+				top: '80%',
+				left: '20%',
+				display: 'inline-block',
+				width: '10%',
+				height: '10%',
+				zIndex: '-100'
+			},
+			buttonHover: false,
+			buttonStyle: {
+				color: '#ffffff'
+			}
+		};
+		return _this;
+	}
+
+	_createClass(Carrusel, [{
+		key: '_changeActive',
+		value: function _changeActive(id) {
+			this.setState({
+				activeID: id,
+				wrapperStyle: {
+					backgroundImage: 'url(\'' + this.props.data[id].img + '\')'
+				},
+				panelStyle: {
+					backgroundColor: this.props.data[id].colour
+				}
+			});
+		}
+	}, {
+		key: '_buttonColour',
+		value: function _buttonColour() {
+			if (!this.state.buttonHover) {
+				this.setState({
+					buttonHover: true,
+					buttonStyle: {
+						color: this.props.data[this.state.activeID].colour
+					}
+				});
+			} else {
+				this.setState({
+					buttonHover: false,
+					buttonStyle: {
+						color: '#ffffff'
+					}
+				});
+			}
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'section',
+				{ className: 'wrapper', style: this.state.wrapperStyle },
+				_react2.default.createElement(Selectors, {
+					data: this.props.data,
+					activeID: this.state.activeID,
+					_changeActive: this._changeActive.bind(this)
+				}),
+				_react2.default.createElement(Panel, {
+					data: this.props.data[this.state.activeID],
+					panelStyle: this.state.panelStyle,
+					buttonStyle: this.state.buttonStyle,
+					_buttonColour: this._buttonColour.bind(this)
+				})
+			);
+		}
+	}]);
+
+	return Carrusel;
+}(_react.Component);
+
+var Panel = function (_Component2) {
+	_inherits(Panel, _Component2);
+
+	function Panel() {
+		_classCallCheck(this, Panel);
+
+		return _possibleConstructorReturn(this, (Panel.__proto__ || Object.getPrototypeOf(Panel)).apply(this, arguments));
+	}
+
+	_createClass(Panel, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'aside',
+					{ className: 'panel', style: this.props.panelStyle },
+					_react2.default.createElement(
+						'h2',
+						{ className: 'panel-header' },
+						this.props.data.header
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'panel-info' },
+						this.props.data.body
+					),
+					_react2.default.createElement(
+						'button',
+						{ className: 'panel-button',
+							style: this.props.buttonStyle,
+							onMouseEnter: this.props._buttonColour,
+							onMouseLeave: this.props._buttonColour },
+						'Read More'
+					)
+				)
+			);
+		}
+	}]);
+
+	return Panel;
+}(_react.Component);
+
+var Selectors = function (_Component3) {
+	_inherits(Selectors, _Component3);
+
+	function Selectors() {
+		_classCallCheck(this, Selectors);
+
+		return _possibleConstructorReturn(this, (Selectors.__proto__ || Object.getPrototypeOf(Selectors)).apply(this, arguments));
+	}
+
+	_createClass(Selectors, [{
+		key: '_handleClick',
+		value: function _handleClick(e) {
+			if (this.props.id !== this.props.activeID) {
+				this.props._changeActive(this.props.id);
+			} else {
+				return;
+			}
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			var _this4 = this;
+
+			return _react2.default.createElement(
+				'div',
+				{ className: 'selectors' },
+				this.props.data.map(function (item) {
+					return _react2.default.createElement(Selector, {
+						key: item.id,
+						id: item.id,
+						_handleClick: _this4._handleClick,
+						_changeActive: _this4.props._changeActive,
+						activeID: _this4.props.activeID
+					});
+				})
+			);
+		}
+	}]);
+
+	return Selectors;
+}(_react.Component);
+
+var Selector = function (_Component4) {
+	_inherits(Selector, _Component4);
+
+	function Selector() {
+		_classCallCheck(this, Selector);
+
+		return _possibleConstructorReturn(this, (Selector.__proto__ || Object.getPrototypeOf(Selector)).apply(this, arguments));
+	}
+
+	_createClass(Selector, [{
+		key: 'render',
+		value: function render() {
+			var componentClass = 'selector';
+			if (this.props.activeID === this.props.id) {
+				componentClass = 'selector active';
+			}
+			return _react2.default.createElement('div', { className: componentClass, onClick: this.props._handleClick.bind(this) });
+		}
+	}]);
+
+	return Selector;
+}(_react.Component);
+
+exports.default = Carrusel;
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var VideoWrapper = function (_Component) {
+	_inherits(VideoWrapper, _Component);
+
+	function VideoWrapper(props) {
+		_classCallCheck(this, VideoWrapper);
+
+		var _this = _possibleConstructorReturn(this, (VideoWrapper.__proto__ || Object.getPrototypeOf(VideoWrapper)).call(this, props));
+
+		_this.state = {
+			videoStyle: {}
+		};
+		return _this;
+	}
+
+	_createClass(VideoWrapper, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ className: "videowrapper", style: this.state.wrapperStyle },
+				_react2.default.createElement(Pruebavid, null)
+			);
+		}
+	}]);
+
+	return VideoWrapper;
+}(_react.Component);
+
+var Pruebavid = function (_Component2) {
+	_inherits(Pruebavid, _Component2);
+
+	function Pruebavid() {
+		_classCallCheck(this, Pruebavid);
+
+		return _possibleConstructorReturn(this, (Pruebavid.__proto__ || Object.getPrototypeOf(Pruebavid)).apply(this, arguments));
+	}
+
+	_createClass(Pruebavid, [{
+		key: "render",
+		value: function render() {
+
+			return _react2.default.createElement(
+				"video",
+				{
+					id: "video",
+					className: "video-js vjs-default-skin col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2",
+					styles: "{this.props.videoStyle}",
+					controls: true, preload: "auto",
+					controlsList: "nodownload",
+					"data-setup": "{}" },
+				_react2.default.createElement("source", { src: "videos/salida.m3u8", type: "application/x-mpegURL" })
+			);
+		}
+	}]);
+
+	return Pruebavid;
+}(_react.Component);
+
+exports.default = VideoWrapper;
 
 /***/ })
 /******/ ]);
