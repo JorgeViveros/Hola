@@ -963,7 +963,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var data = [{
 	id: 0,
 	header: 'Video1',
-	body: 'Aqui iria la descripcion del video 1,Aqui iria la descripcion del video 1, Aqui iria la descripcion del video 1, Aqui iria la descripcion del video 1, Aqui iria la descripcion del video 1, Aqui iria la descripcion del video 1',
+	body: 'Aqui iria la descripcion del video 1,Aqui iria la descripcion del video 1',
 	colour: '#242846',
 	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc1.jpg',
 	urlvideo: 'videos/salida.m3u8'

@@ -1,8 +1,15 @@
 .video-js {
   font-size: 10px;
   color: #fff;
+  width: 65%;
   height: 500px;
-  width: 900px;
+  position: fixed;
+  top:14%;
+  left:90%;
+
+
+    -webkit-transform: translateX(-90%) translateY(-14%);
+
 }
 
 .vjs-default-skin .vjs-big-play-button {
