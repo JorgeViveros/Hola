@@ -11,14 +11,6 @@ class Carrusel extends Component {
 			panelStyle: {
 				background: this.props.data[0].colour
 			},
-			videoStyle:{
-			    top: '80%',
-			    left: '20%',
-			    display: 'inline-block',
-			    width: '10%',
-			    height: '10%',
-			    zIndex: '-100',
-			},
 			buttonHover: false,
 			buttonStyle: {
 				color: '#ffffff'
@@ -67,7 +59,6 @@ class Carrusel extends Component {
 					buttonStyle={this.state.buttonStyle}
 					_buttonColour={this._buttonColour.bind(this)}
 				/>
-
 			</section>
 		);
 	}
@@ -129,6 +120,3 @@ class Selector extends Component {
 
 
 export default Carrusel;
-
-
-

@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Contenido from './components/Contenido.jsx';
-import Video from './components/Video.jsx';
+//import Contenido from './components/Contenido.jsx';
+//import Video from './components/Video.jsx';
 import Carrusel from './components/Carrusel.jsx';
 import VideoWrapper from './components/VideoWrapper.jsx';
-
-
-
-
 
 
 render(
@@ -15,39 +11,41 @@ render(
 	document.getElementById('videowrapper')
 );
 
-
-
-
 const data = [{
 	id: 0,
-	header: 'Gluten-free Bicycle',
-	body: 'Chillwave knausgaard chambray flannel tumblr, narwhal microdosing blog...',
+	header: 'Video1',
+	body: 'Aqui iria la descripcion del video 1',
 	colour: '#242846',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc1.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc1.jpg',
+	urlvideo : 'videos/salida.m3u8'
 }, {
 	id: 1,
-	header: 'Post-ironic Disrupt',
-	body: 'Swag biodiesel disrupt retro fashion, salvia food truck kitsch wolf DIY...',
+	header: 'Video2',
+	body: 'Aqui iria la descripcion del video 2',
 	colour: '#ba9077',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc2.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc2.jpg',
+	urlvideo : 'videos/salida.m3u8'
 }, {
 	id: 2,
-	header: 'Lumber-Sexual Roof Party ',
-	body: 'Flexitarian 3 wolf moon cliche, migas scenester street art...',
+	header: 'Video3',
+	body: 'Aqui iria la descripcion del video 3',
 	colour: '#1ABC9C',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc3.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc3.jpg',
+	urlvideo : 'videos/salida.m3u8'
 }, {
 	id: 3,
-	header: 'Vegan hoodie trust fund',
-	body: 'Farm-to-table tousled try-hard, normcore ethical tilde iPhone...',
+	header: 'video4',
+	body: 'Aqui iria la descripcion del video 4',
 	colour: '#C0392B',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc4.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc4.jpg',
+	urlvideo : 'videos/salida.m3u8'
 }, {
 	id: 4,
-	header: 'cliche craft beer',
-	body: 'Tote bag flannel normcore polaroid +1. Quinoa actually 90s sustainable...',
+	header: 'video5',
+	body: 'Aqui iria la descripcion del video 5',
 	colour: '#513B56',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc5.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc5.jpg',
+	urlvideo : 'videos/salida.m3u8'
 }];
 
 

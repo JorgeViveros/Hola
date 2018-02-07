@@ -258,21 +258,6 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(15);
-} else {
-  module.exports = __webpack_require__(16);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
 /**
@@ -309,6 +294,21 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(15);
+} else {
+  module.exports = __webpack_require__(16);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -506,7 +506,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -682,7 +682,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -940,62 +940,61 @@ module.exports = focusNode;
 "use strict";
 
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(18);
 
-var _Contenido = __webpack_require__(27);
-
-var _Contenido2 = _interopRequireDefault(_Contenido);
-
-var _Video = __webpack_require__(28);
-
-var _Video2 = _interopRequireDefault(_Video);
-
-var _Carrusel = __webpack_require__(29);
+var _Carrusel = __webpack_require__(27);
 
 var _Carrusel2 = _interopRequireDefault(_Carrusel);
 
-var _VideoWrapper = __webpack_require__(30);
+var _VideoWrapper = __webpack_require__(28);
 
 var _VideoWrapper2 = _interopRequireDefault(_VideoWrapper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//import Contenido from './components/Contenido.jsx';
+//import Video from './components/Video.jsx';
 (0, _reactDom.render)(_react2.default.createElement(_VideoWrapper2.default, null), document.getElementById('videowrapper'));
 
 var data = [{
 	id: 0,
-	header: 'Gluten-free Bicycle',
-	body: 'Chillwave knausgaard chambray flannel tumblr, narwhal microdosing blog...',
+	header: 'Video1',
+	body: 'Aqui iria la descripcion del video 1',
 	colour: '#242846',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc1.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc1.jpg',
+	urlvideo: 'videos/salida.m3u8'
 }, {
 	id: 1,
-	header: 'Post-ironic Disrupt',
-	body: 'Swag biodiesel disrupt retro fashion, salvia food truck kitsch wolf DIY...',
+	header: 'Video2',
+	body: 'Aqui iria la descripcion del video 2',
 	colour: '#ba9077',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc2.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc2.jpg',
+	urlvideo: 'videos/salida.m3u8'
 }, {
 	id: 2,
-	header: 'Lumber-Sexual Roof Party ',
-	body: 'Flexitarian 3 wolf moon cliche, migas scenester street art...',
+	header: 'Video3',
+	body: 'Aqui iria la descripcion del video 3',
 	colour: '#1ABC9C',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc3.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc3.jpg',
+	urlvideo: 'videos/salida.m3u8'
 }, {
 	id: 3,
-	header: 'Vegan hoodie trust fund',
-	body: 'Farm-to-table tousled try-hard, normcore ethical tilde iPhone...',
+	header: 'video4',
+	body: 'Aqui iria la descripcion del video 4',
 	colour: '#C0392B',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc4.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc4.jpg',
+	urlvideo: 'videos/salida.m3u8'
 }, {
 	id: 4,
-	header: 'cliche craft beer',
-	body: 'Tote bag flannel normcore polaroid +1. Quinoa actually 90s sustainable...',
+	header: 'video5',
+	body: 'Aqui iria la descripcion del video 5',
 	colour: '#513B56',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc5.jpg'
+	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc5.jpg',
+	urlvideo: 'videos/salida.m3u8'
 }];
 
 (0, _reactDom.render)(_react2.default.createElement(_Carrusel2.default, { data: data }), document.getElementById('carrusel'));
@@ -1014,7 +1013,7 @@ var data = [{
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(2),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(1),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -1054,7 +1053,7 @@ var _assign = __webpack_require__(3);
 var emptyObject = __webpack_require__(4);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 var checkPropTypes = __webpack_require__(7);
 
 // TODO: this is special because it gets imported during build.
@@ -2475,7 +2474,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(2),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(4);
+var aa=__webpack_require__(2),l=__webpack_require__(8),B=__webpack_require__(3),C=__webpack_require__(1),ba=__webpack_require__(9),da=__webpack_require__(10),ea=__webpack_require__(11),fa=__webpack_require__(12),ia=__webpack_require__(13),D=__webpack_require__(4);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -2772,12 +2771,12 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(1);
+var React = __webpack_require__(2);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
 var ExecutionEnvironment = __webpack_require__(8);
 var _assign = __webpack_require__(3);
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 var EventListener = __webpack_require__(9);
 var getActiveElement = __webpack_require__(10);
 var shallowEqual = __webpack_require__(11);
@@ -18321,135 +18320,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Contenido = function (_Component) {
-	_inherits(Contenido, _Component);
-
-	function Contenido() {
-		_classCallCheck(this, Contenido);
-
-		return _possibleConstructorReturn(this, (Contenido.__proto__ || Object.getPrototypeOf(Contenido)).apply(this, arguments));
-	}
-
-	_createClass(Contenido, [{
-		key: 'render',
-		value: function render() {
-			return [{
-				nombre: 'Video-1',
-				titulo: 'Medicina Fetal Apartado 1'
-			}, {
-				nombre: 'Video-2',
-				titulo: 'Medicina Fetal Apartado 2'
-			}].map(function (anObjectMapped, index) {
-				return _react2.default.createElement(
-					'h2',
-					{ key: anObjectMapped.nombre + '_{anObjectMapped.titulo}' },
-					anObjectMapped.nombre,
-					' - ',
-					anObjectMapped.titulo
-				);
-			});
-		}
-	}]);
-
-	return Contenido;
-}(_react.Component);
-
-exports.default = Contenido;
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Video = function (_Component) {
-  _inherits(Video, _Component);
-
-  function Video() {
-    _classCallCheck(this, Video);
-
-    return _possibleConstructorReturn(this, (Video.__proto__ || Object.getPrototypeOf(Video)).apply(this, arguments));
-  }
-
-  _createClass(Video, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-          "center",
-          null,
-          _react2.default.createElement(
-            "h4",
-            null,
-            "Video-1"
-          )
-        ),
-        _react2.default.createElement(
-          "video",
-          {
-            id: "video",
-            className: "video-js vjs-default-skin col-xs-12 col-sm-12 col-md-12",
-            controls: true, preload: "auto",
-            controlsList: "nodownload",
-            "data-setup": "{}" },
-          _react2.default.createElement("source", { src: "videos/salida.m3u8", type: "application/x-mpegURL" })
-        )
-      );
-    }
-  }]);
-
-  return Video;
-}(_react.Component);
-
-exports.default = Video;
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -18476,14 +18347,6 @@ var Carrusel = function (_Component) {
 			},
 			panelStyle: {
 				background: _this.props.data[0].colour
-			},
-			videoStyle: {
-				top: '80%',
-				left: '20%',
-				display: 'inline-block',
-				width: '10%',
-				height: '10%',
-				zIndex: '-100'
 			},
 			buttonHover: false,
 			buttonStyle: {
@@ -18661,7 +18524,7 @@ var Selector = function (_Component4) {
 exports.default = Carrusel;
 
 /***/ }),
-/* 30 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18673,7 +18536,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -18688,23 +18551,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var VideoWrapper = function (_Component) {
 	_inherits(VideoWrapper, _Component);
 
-	function VideoWrapper(props) {
+	function VideoWrapper() {
 		_classCallCheck(this, VideoWrapper);
 
-		var _this = _possibleConstructorReturn(this, (VideoWrapper.__proto__ || Object.getPrototypeOf(VideoWrapper)).call(this, props));
-
-		_this.state = {
-			videoStyle: {}
-		};
-		return _this;
+		return _possibleConstructorReturn(this, (VideoWrapper.__proto__ || Object.getPrototypeOf(VideoWrapper)).apply(this, arguments));
 	}
 
 	_createClass(VideoWrapper, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
-				"div",
-				{ className: "videowrapper", style: this.state.wrapperStyle },
+				'div',
+				{ className: 'videowrapper' },
 				_react2.default.createElement(Pruebavid, null)
 			);
 		}
@@ -18716,26 +18574,39 @@ var VideoWrapper = function (_Component) {
 var Pruebavid = function (_Component2) {
 	_inherits(Pruebavid, _Component2);
 
-	function Pruebavid() {
+	function Pruebavid(props) {
 		_classCallCheck(this, Pruebavid);
 
-		return _possibleConstructorReturn(this, (Pruebavid.__proto__ || Object.getPrototypeOf(Pruebavid)).apply(this, arguments));
+		var _this2 = _possibleConstructorReturn(this, (Pruebavid.__proto__ || Object.getPrototypeOf(Pruebavid)).call(this, props));
+
+		_this2.state = {
+			activeID: 0,
+			pruebavidStyle: {
+				backgroundImage: 'url(\'' + _this2.props.data[0].img + '\')'
+			},
+			panelStyle: {
+				background: _this2.props.data[0].colour
+			},
+			buttonHover: false,
+			buttonStyle: {
+				color: '#ffffff'
+			}
+		};
+		return _this2;
 	}
 
 	_createClass(Pruebavid, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
-
 			return _react2.default.createElement(
-				"video",
+				'video',
 				{
-					id: "video",
-					className: "video-js vjs-default-skin col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2",
-					styles: "{this.props.videoStyle}",
-					controls: true, preload: "auto",
-					controlsList: "nodownload",
-					"data-setup": "{}" },
-				_react2.default.createElement("source", { src: "videos/salida.m3u8", type: "application/x-mpegURL" })
+					id: 'video',
+					className: 'video-js vjs-default-skin col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2',
+					controls: true, preload: 'auto',
+					controlsList: 'nodownload',
+					'data-setup': '{}' },
+				_react2.default.createElement('source', { src: 'videos/salida.m3u8', type: 'application/x-mpegURL' })
 			);
 		}
 	}]);
