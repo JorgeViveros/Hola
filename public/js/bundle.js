@@ -963,7 +963,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var data = [{
 	id: 0,
 	header: 'Video1',
-	body: 'Aqui iria la descripcion del video 1',
+	body: 'Aqui iria la descripcion del video 1,Aqui iria la descripcion del video 1, Aqui iria la descripcion del video 1, Aqui iria la descripcion del video 1, Aqui iria la descripcion del video 1, Aqui iria la descripcion del video 1',
 	colour: '#242846',
 	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc1.jpg',
 	urlvideo: 'videos/salida.m3u8'
@@ -18558,11 +18558,11 @@ var VideoWrapper = function (_Component) {
 	}
 
 	_createClass(VideoWrapper, [{
-		key: 'render',
+		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				'div',
-				{ className: 'videowrapper' },
+				"div",
+				{ className: "videowrapper" },
 				_react2.default.createElement(Pruebavid, null)
 			);
 		}
@@ -18574,39 +18574,24 @@ var VideoWrapper = function (_Component) {
 var Pruebavid = function (_Component2) {
 	_inherits(Pruebavid, _Component2);
 
-	function Pruebavid(props) {
+	function Pruebavid() {
 		_classCallCheck(this, Pruebavid);
 
-		var _this2 = _possibleConstructorReturn(this, (Pruebavid.__proto__ || Object.getPrototypeOf(Pruebavid)).call(this, props));
-
-		_this2.state = {
-			activeID: 0,
-			pruebavidStyle: {
-				backgroundImage: 'url(\'' + _this2.props.data[0].img + '\')'
-			},
-			panelStyle: {
-				background: _this2.props.data[0].colour
-			},
-			buttonHover: false,
-			buttonStyle: {
-				color: '#ffffff'
-			}
-		};
-		return _this2;
+		return _possibleConstructorReturn(this, (Pruebavid.__proto__ || Object.getPrototypeOf(Pruebavid)).apply(this, arguments));
 	}
 
 	_createClass(Pruebavid, [{
-		key: 'render',
+		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				'video',
+				"video",
 				{
-					id: 'video',
-					className: 'video-js vjs-default-skin col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2',
-					controls: true, preload: 'auto',
-					controlsList: 'nodownload',
-					'data-setup': '{}' },
-				_react2.default.createElement('source', { src: 'videos/salida.m3u8', type: 'application/x-mpegURL' })
+					id: "video",
+					className: "video-js vjs-default-skin col-xs-12 col-sm-12 col-md-12",
+					controls: true, preload: "auto",
+					controlsList: "nodownload",
+					"data-setup": "{}" },
+				_react2.default.createElement("source", { src: "videos/Ponencia1/PONENCIA1EN.m3u8", type: "application/x-mpegURL" })
 			);
 		}
 	}]);
