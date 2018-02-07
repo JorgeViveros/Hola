@@ -40,4 +40,5 @@ class Pruebavid extends Component{
 		
 	}
 }
+
 export default VideoWrapper;
