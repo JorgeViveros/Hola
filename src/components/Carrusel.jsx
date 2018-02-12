@@ -5,9 +5,7 @@ class Carrusel extends Component {
 		super(props);
 		this.state = {
 			activeID: 0,
-			wrapperStyle: {
-				backgroundImage: `url('${this.props.data[0].img}')`
-			},
+			videoSelected: this.props.data[0].urlvideo,
 			panelStyle: {
 				background: this.props.data[0].colour
 			},
@@ -20,9 +18,7 @@ class Carrusel extends Component {
 	_changeActive(id) {
 		this.setState({
 			activeID: id,
-			wrapperStyle: {
-				backgroundImage: `url('${this.props.data[id].img}')`
-			},
+			videoSelected: this.props.data[id].urlvideo,
 			panelStyle: {
 				backgroundColor: this.props.data[id].colour
 			}
@@ -47,7 +43,7 @@ class Carrusel extends Component {
 	}
 	render() {
 		return (
-			<section className="wrapper" style={this.state.wrapperStyle}>
+			<section className="wrapper">
 				<Selectors 
 					data={this.props.data}
 					activeID={this.state.activeID}
@@ -59,8 +55,29 @@ class Carrusel extends Component {
 					buttonStyle={this.state.buttonStyle}
 					_buttonColour={this._buttonColour.bind(this)}
 				/>
+				<VideoWrapper
+					data={this.props.data[this.state.activeID]}
+				/>
 			</section>
 		);
+	}
+}
+class VideoWrapper extends Component{
+	render(){
+	return(
+		<div className="videowrapper">
+			<h1>{this.props.data.urlvideo}</h1>
+			<video
+				id="video"
+				className="video-js vjs-default-skin col-xs-12 col-sm-12 col-md-12"
+				controls preload="auto"
+				controlsList="nodownload"
+				data-setup='{}'>
+				<source src={this.props.data.urlvideo} type="application/x-mpegURL"></source>
+			</video>
+		</div>
+    );
+		
 	}
 }
 class Panel extends Component {

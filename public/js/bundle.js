@@ -950,52 +950,42 @@ var _Carrusel = __webpack_require__(27);
 
 var _Carrusel2 = _interopRequireDefault(_Carrusel);
 
-var _VideoWrapper = __webpack_require__(28);
-
-var _VideoWrapper2 = _interopRequireDefault(_VideoWrapper);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//import Contenido from './components/Contenido.jsx';
-//import Video from './components/Video.jsx';
-(0, _reactDom.render)(_react2.default.createElement(_VideoWrapper2.default, null), document.getElementById('videowrapper'));
 
 var data = [{
 	id: 0,
 	header: 'Video1',
-	body: 'Aqui iria la descripcion del video 1,Aqui iria la descripcion del video 1',
 	colour: '#242846',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc1.jpg',
-	urlvideo: 'videos/salida.m3u8'
+	body: 'Aqui iria la descripcion del video 1',
+	urlvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
 }, {
 	id: 1,
 	header: 'Video2',
 	body: 'Aqui iria la descripcion del video 2',
 	colour: '#ba9077',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc2.jpg',
-	urlvideo: 'videos/salida.m3u8'
+	urlvideo: 'videos/Ponencia2/PONENCIA2EN.m3u8'
 }, {
 	id: 2,
 	header: 'Video3',
 	body: 'Aqui iria la descripcion del video 3',
 	colour: '#1ABC9C',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc3.jpg',
-	urlvideo: 'videos/salida.m3u8'
+	urlvideo: 'videos/Ponencia3/PONENCIA3EN.m3u8'
 }, {
 	id: 3,
 	header: 'video4',
 	body: 'Aqui iria la descripcion del video 4',
 	colour: '#C0392B',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc4.jpg',
-	urlvideo: 'videos/salida.m3u8'
+	urlvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
 }, {
 	id: 4,
 	header: 'video5',
 	body: 'Aqui iria la descripcion del video 5',
 	colour: '#513B56',
-	img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc5.jpg',
-	urlvideo: 'videos/salida.m3u8'
+	urlvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
 }];
+//import Contenido from './components/Contenido.jsx';
+//import Video from './components/Video.jsx';
+
 
 (0, _reactDom.render)(_react2.default.createElement(_Carrusel2.default, { data: data }), document.getElementById('carrusel'));
 
@@ -18342,9 +18332,7 @@ var Carrusel = function (_Component) {
 
 		_this.state = {
 			activeID: 0,
-			wrapperStyle: {
-				backgroundImage: 'url(\'' + _this.props.data[0].img + '\')'
-			},
+			videoSelected: _this.props.data[0].urlvideo,
 			panelStyle: {
 				background: _this.props.data[0].colour
 			},
@@ -18361,9 +18349,7 @@ var Carrusel = function (_Component) {
 		value: function _changeActive(id) {
 			this.setState({
 				activeID: id,
-				wrapperStyle: {
-					backgroundImage: 'url(\'' + this.props.data[id].img + '\')'
-				},
+				videoSelected: this.props.data[id].urlvideo,
 				panelStyle: {
 					backgroundColor: this.props.data[id].colour
 				}
@@ -18393,7 +18379,7 @@ var Carrusel = function (_Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				'section',
-				{ className: 'wrapper', style: this.state.wrapperStyle },
+				{ className: 'wrapper' },
 				_react2.default.createElement(Selectors, {
 					data: this.props.data,
 					activeID: this.state.activeID,
@@ -18404,6 +18390,9 @@ var Carrusel = function (_Component) {
 					panelStyle: this.state.panelStyle,
 					buttonStyle: this.state.buttonStyle,
 					_buttonColour: this._buttonColour.bind(this)
+				}),
+				_react2.default.createElement(VideoWrapper, {
+					data: this.props.data[this.state.activeID]
 				})
 			);
 		}
@@ -18412,8 +18401,45 @@ var Carrusel = function (_Component) {
 	return Carrusel;
 }(_react.Component);
 
-var Panel = function (_Component2) {
-	_inherits(Panel, _Component2);
+var VideoWrapper = function (_Component2) {
+	_inherits(VideoWrapper, _Component2);
+
+	function VideoWrapper() {
+		_classCallCheck(this, VideoWrapper);
+
+		return _possibleConstructorReturn(this, (VideoWrapper.__proto__ || Object.getPrototypeOf(VideoWrapper)).apply(this, arguments));
+	}
+
+	_createClass(VideoWrapper, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'videowrapper' },
+				_react2.default.createElement(
+					'h1',
+					null,
+					this.props.data.urlvideo
+				),
+				_react2.default.createElement(
+					'video',
+					{
+						id: 'video',
+						className: 'video-js vjs-default-skin col-xs-12 col-sm-12 col-md-12',
+						controls: true, preload: 'auto',
+						controlsList: 'nodownload',
+						'data-setup': '{}' },
+					_react2.default.createElement('source', { src: this.props.data.urlvideo, type: 'application/x-mpegURL' })
+				)
+			);
+		}
+	}]);
+
+	return VideoWrapper;
+}(_react.Component);
+
+var Panel = function (_Component3) {
+	_inherits(Panel, _Component3);
 
 	function Panel() {
 		_classCallCheck(this, Panel);
@@ -18456,8 +18482,8 @@ var Panel = function (_Component2) {
 	return Panel;
 }(_react.Component);
 
-var Selectors = function (_Component3) {
-	_inherits(Selectors, _Component3);
+var Selectors = function (_Component4) {
+	_inherits(Selectors, _Component4);
 
 	function Selectors() {
 		_classCallCheck(this, Selectors);
@@ -18477,7 +18503,7 @@ var Selectors = function (_Component3) {
 	}, {
 		key: 'render',
 		value: function render() {
-			var _this4 = this;
+			var _this5 = this;
 
 			return _react2.default.createElement(
 				'div',
@@ -18486,9 +18512,9 @@ var Selectors = function (_Component3) {
 					return _react2.default.createElement(Selector, {
 						key: item.id,
 						id: item.id,
-						_handleClick: _this4._handleClick,
-						_changeActive: _this4.props._changeActive,
-						activeID: _this4.props.activeID
+						_handleClick: _this5._handleClick,
+						_changeActive: _this5.props._changeActive,
+						activeID: _this5.props.activeID
 					});
 				})
 			);
@@ -18498,8 +18524,8 @@ var Selectors = function (_Component3) {
 	return Selectors;
 }(_react.Component);
 
-var Selector = function (_Component4) {
-	_inherits(Selector, _Component4);
+var Selector = function (_Component5) {
+	_inherits(Selector, _Component5);
 
 	function Selector() {
 		_classCallCheck(this, Selector);
@@ -18522,84 +18548,6 @@ var Selector = function (_Component4) {
 }(_react.Component);
 
 exports.default = Carrusel;
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var VideoWrapper = function (_Component) {
-	_inherits(VideoWrapper, _Component);
-
-	function VideoWrapper() {
-		_classCallCheck(this, VideoWrapper);
-
-		return _possibleConstructorReturn(this, (VideoWrapper.__proto__ || Object.getPrototypeOf(VideoWrapper)).apply(this, arguments));
-	}
-
-	_createClass(VideoWrapper, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				{ className: "videowrapper" },
-				_react2.default.createElement(Pruebavid, null)
-			);
-		}
-	}]);
-
-	return VideoWrapper;
-}(_react.Component);
-
-var Pruebavid = function (_Component2) {
-	_inherits(Pruebavid, _Component2);
-
-	function Pruebavid() {
-		_classCallCheck(this, Pruebavid);
-
-		return _possibleConstructorReturn(this, (Pruebavid.__proto__ || Object.getPrototypeOf(Pruebavid)).apply(this, arguments));
-	}
-
-	_createClass(Pruebavid, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"video",
-				{
-					id: "video",
-					className: "video-js vjs-default-skin col-xs-12 col-sm-12 col-md-12",
-					controls: true, preload: "auto",
-					controlsList: "nodownload",
-					"data-setup": "{}" },
-				_react2.default.createElement("source", { src: "videos/Ponencia1/PONENCIA1EN.m3u8", type: "application/x-mpegURL" })
-			);
-		}
-	}]);
-
-	return Pruebavid;
-}(_react.Component);
-
-exports.default = VideoWrapper;
 
 /***/ })
 /******/ ]);
