@@ -190,7 +190,12 @@ aside.panel button.panel-button:focus {
   }
 }
 
-
+.indice{
+  margin-top: -30px;
+  margin-left: 15px;
+  color: white;
+  padding-bottom: 10px;
+}
 
 
 /*
