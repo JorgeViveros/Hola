@@ -46,20 +46,23 @@ class Carrusel extends Component {
 	render() {
 		return (
 			<section className="wrapper">
-				<Selectors 
+				<Selectors
 					data={this.props.data}
 					activeID={this.state.activeID}
 					_changeActive={this._changeActive.bind(this)}
 				/>
-				<Panel 
+				<Panel
 					data={this.props.data[this.state.activeID]}
 					panelStyle={this.state.panelStyle}
 					buttonStyle={this.state.buttonStyle}
 					_buttonColour={this._buttonColour.bind(this)}
 				/>
-				<VideoWrapper
-					data={this.props.data[this.state.activeID]}
-				/>
+				<VideoWrapper data={this.props.data[this.state.activeID]}/>
+
+					<Route path="/:id" render={() =>(
+						<h1>Id: {this.props.data[this.state.activeID].id+1}</h1>
+					)}/>
+
 			</section>
 		);
 	}
@@ -67,7 +70,7 @@ class Carrusel extends Component {
 class VideoWrapper extends Component{
 	render(){
 	return(
-		<div className="videowrapper"> 
+		<div className="videowrapper">
 			<video
 				id="video"
 				className="video-js vjs-default-skin col-xs-12 col-sm-12 col-md-12"
@@ -107,7 +110,7 @@ class Selectors extends Component {
 			<div className="selectors">
 				{this.props.data.map((item) =>
 					<Link  to={`/${item.id+1}`}>
-					<Selector 
+					<Selector
 						key={item.id}
 						id={item.id}
 						_handleClick={this._handleClick}
@@ -117,12 +120,6 @@ class Selectors extends Component {
 					/>
 					</Link>
 				)}
-				<Switch>
-					<Route path={`/:id(\\d+)`} component={VideoWrapper}/>
-				</Switch>
-				}
-					
-
 			</div>
 		);
 	}
@@ -137,12 +134,17 @@ class Selector extends Component {
 		return (
 			<div className={componentClass} onClick={this.props._handleClick.bind(this)}>
 					<h2 className="indice">{indice}</h2>
-			</div>	
+			</div>
 		);
 	}
 }
 
 
+class VideoPrueba extends Component {
+	render(){
+		<h2>Hola</h2>
+	}
+}
+
 
 export default Carrusel;
-

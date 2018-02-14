@@ -2407,7 +2407,7 @@ var data = [{
 	id: 1,
 	titulo: 'Video 2',
 	header: 'Video2',
-	body: 'Aqui iria la descripcion del video 2',
+	body: 'Aquí iría la descrpción del video 2',
 	colour: '#ba9077',
 	srcvideo: 'videos/Ponencia2/PONENCIA2EN.m3u8'
 }, {
@@ -19845,6 +19845,8 @@ var Carrusel = function (_Component) {
 	}, {
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
 			return _react2.default.createElement(
 				'section',
 				{ className: 'wrapper' },
@@ -19859,9 +19861,15 @@ var Carrusel = function (_Component) {
 					buttonStyle: this.state.buttonStyle,
 					_buttonColour: this._buttonColour.bind(this)
 				}),
-				_react2.default.createElement(VideoWrapper, {
-					data: this.props.data[this.state.activeID]
-				})
+				_react2.default.createElement(VideoWrapper, { data: this.props.data[this.state.activeID] }),
+				_react2.default.createElement(_reactRouterDom.Route, { path: '/:id', render: function render() {
+						return _react2.default.createElement(
+							'h1',
+							null,
+							'Id: ',
+							_this2.props.data[_this2.state.activeID].id + 1
+						);
+					} })
 			);
 		}
 	}]);
@@ -19958,7 +19966,7 @@ var Selectors = function (_Component4) {
 	}, {
 		key: 'render',
 		value: function render() {
-			var _this5 = this;
+			var _this6 = this;
 
 			return _react2.default.createElement(
 				'div',
@@ -19970,19 +19978,13 @@ var Selectors = function (_Component4) {
 						_react2.default.createElement(Selector, {
 							key: item.id,
 							id: item.id,
-							_handleClick: _this5._handleClick,
-							_changeActive: _this5.props._changeActive,
-							activeID: _this5.props.activeID,
+							_handleClick: _this6._handleClick,
+							_changeActive: _this6.props._changeActive,
+							activeID: _this6.props.activeID,
 							header: item.header
 						})
 					);
-				}),
-				_react2.default.createElement(
-					_reactRouterDom.Switch,
-					null,
-					_react2.default.createElement(_reactRouterDom.Route, { path: '/:id(\\d+)', component: VideoWrapper })
-				),
-				'}'
+				})
 			);
 		}
 	}]);
@@ -20020,6 +20022,29 @@ var Selector = function (_Component5) {
 	}]);
 
 	return Selector;
+}(_react.Component);
+
+var VideoPrueba = function (_Component6) {
+	_inherits(VideoPrueba, _Component6);
+
+	function VideoPrueba() {
+		_classCallCheck(this, VideoPrueba);
+
+		return _possibleConstructorReturn(this, (VideoPrueba.__proto__ || Object.getPrototypeOf(VideoPrueba)).apply(this, arguments));
+	}
+
+	_createClass(VideoPrueba, [{
+		key: 'render',
+		value: function render() {
+			_react2.default.createElement(
+				'h2',
+				null,
+				'Hola'
+			);
+		}
+	}]);
+
+	return VideoPrueba;
 }(_react.Component);
 
 exports.default = Carrusel;

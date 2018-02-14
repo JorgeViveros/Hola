@@ -19,7 +19,7 @@ const data = [{
 	id: 1,
 	titulo: 'Video 2',
 	header: 'Video2',
-	body: 'Aqui iria la descripcion del video 2',
+	body: 'Aquí iría la descrpción del video 2',
 	colour: '#ba9077',
 	srcvideo: 'videos/Ponencia2/PONENCIA2EN.m3u8'
 }, {
