@@ -13,7 +13,7 @@ const data = [{
 	titulo: 'Video 1',
 	header: 'Video1',
 	colour: '#242846',
-	body: 'Aqui iria la descripcion del video 1',
+	body: 'Aquí iría la descripción del video 1',
 	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
 }, {
 	id: 1,
@@ -83,7 +83,6 @@ const data = [{
 
 render(
 	<BrowserRouter>
-		<Carrusel data={data} />	
+		<Carrusel data={data} />
 	</BrowserRouter>
 	, document.getElementById('carrusel'));
-
