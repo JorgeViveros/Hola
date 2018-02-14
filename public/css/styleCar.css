@@ -63,7 +63,7 @@ body,
   padding-left: 20px;
   width: 30px;
   background: rgba(0, 0, 0, 0.1);
-  height: 100vh;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +85,7 @@ body,
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  margin: 5px 0;
+  margin: 15px 0;
   opacity: 0.6;
   cursor: pointer;
   -webkit-transition: background .3s ease-in-out, opacity .3s ease-in-out;
@@ -124,6 +124,8 @@ section.wrapper {
 }
 
 aside.panel {
+  margin-top: 20px;
+  padding-bottom: 20%;
   width: 28vw;
   height: 100%;
   opacity: 0.9;
@@ -136,7 +138,7 @@ aside.panel {
 aside.panel h2.panel-header,
 aside.panel p.panel-info {
   margin: 0;
-  padding: 1.3rem 3.5rem;
+  padding: 1rem 7rem;
 }
 aside.panel h2.panel-header {
   padding-top: 2em;
@@ -145,12 +147,12 @@ aside.panel h2.panel-header {
   text-transform: capitalize;
 }
 aside.panel p.panel-info {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   line-height: 1.8em;
 }
 aside.panel button.panel-button {
   margin: 1.3rem 3.5rem;
-  padding: 0.8em 1.3em;
+  padding: 1em 1.5em;
   background: none;
   border: 1px solid #fff;
   color: #fff;
@@ -190,11 +192,11 @@ aside.panel button.panel-button:focus {
   }
 }
 
-.indice{
-  margin-top: -30px;
+h2.indice{
+  margin-top: -3px;
   margin-left: 15px;
+  font-size: 0.8rem;
   color: white;
-  padding-bottom: 10px;
 }
 
 

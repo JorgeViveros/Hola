@@ -43,6 +43,41 @@ const data = [{
 	body: 'Aqui iria la descripcion del video 5',
 	colour: '#513B56',
 	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 5,
+	titulo: 'Video 6',
+	header: 'Video6',
+	body: 'Aqui iria la descripcion del video 6',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 6,
+	titulo: 'Video 7',
+	header: 'Video7',
+	body: 'Aqui iria la descripcion del video 7',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 7,
+	titulo: 'Video 8',
+	header: 'Video8',
+	body: 'Aqui iria la descripcion del video 8',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 8,
+	titulo: 'Video 9',
+	header: 'Video9',
+	body: 'Aqui iria la descripcion del video 9',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 9,
+	titulo: 'Video 10',
+	header: 'Video10',
+	body: 'Aqui iria la descripcion del video 10',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
 }];
 
 

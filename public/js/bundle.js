@@ -2431,6 +2431,41 @@ var data = [{
 	body: 'Aqui iria la descripcion del video 5',
 	colour: '#513B56',
 	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 5,
+	titulo: 'Video 6',
+	header: 'Video6',
+	body: 'Aqui iria la descripcion del video 6',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 6,
+	titulo: 'Video 7',
+	header: 'Video7',
+	body: 'Aqui iria la descripcion del video 7',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 7,
+	titulo: 'Video 8',
+	header: 'Video8',
+	body: 'Aqui iria la descripcion del video 8',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 8,
+	titulo: 'Video 9',
+	header: 'Video9',
+	body: 'Aqui iria la descripcion del video 9',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
+}, {
+	id: 9,
+	titulo: 'Video 10',
+	header: 'Video10',
+	body: 'Aqui iria la descripcion del video 10',
+	colour: '#513B56',
+	srcvideo: 'videos/Ponencia1/PONENCIA1EN.m3u8'
 }];
 
 (0, _reactDom.render)(_react2.default.createElement(
@@ -19893,14 +19928,6 @@ var Panel = function (_Component3) {
 						'p',
 						{ className: 'panel-info' },
 						this.props.data.body
-					),
-					_react2.default.createElement(
-						'button',
-						{ className: 'panel-button',
-							style: this.props.buttonStyle,
-							onMouseEnter: this.props._buttonColour,
-							onMouseLeave: this.props._buttonColour },
-						'Read More'
 					)
 				)
 			);
@@ -19949,7 +19976,13 @@ var Selectors = function (_Component4) {
 							header: item.header
 						})
 					);
-				})
+				}),
+				_react2.default.createElement(
+					_reactRouterDom.Switch,
+					null,
+					_react2.default.createElement(_reactRouterDom.Route, { path: '/:id(\\d+)', component: VideoWrapper })
+				),
+				'}'
 			);
 		}
 	}]);
@@ -19978,13 +20011,9 @@ var Selector = function (_Component5) {
 				'div',
 				{ className: componentClass, onClick: this.props._handleClick.bind(this) },
 				_react2.default.createElement(
-					'div',
+					'h2',
 					{ className: 'indice' },
-					_react2.default.createElement(
-						'h2',
-						null,
-						indice
-					)
+					indice
 				)
 			);
 		}

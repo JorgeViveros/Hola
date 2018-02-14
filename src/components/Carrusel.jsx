@@ -60,7 +60,6 @@ class Carrusel extends Component {
 				<VideoWrapper
 					data={this.props.data[this.state.activeID]}
 				/>
-
 			</section>
 		);
 	}
@@ -79,7 +78,6 @@ class VideoWrapper extends Component{
 			</video>
 		</div>
     );
-		
 	}
 }
 
@@ -91,12 +89,6 @@ class Panel extends Component {
 			<aside className="panel" style={this.props.panelStyle}>
 				<h2 className="panel-header">{this.props.data.header}</h2>
 				<p className="panel-info">{this.props.data.body}</p>
-				<button className="panel-button" 
-					style={this.props.buttonStyle}
-					onMouseEnter={this.props._buttonColour}
-					onMouseLeave={this.props._buttonColour}>
-					Read More
-				</button>
 			</aside>
 		</div>
 		);
@@ -123,8 +115,12 @@ class Selectors extends Component {
 						activeID={this.props.activeID}
 						header={item.header}
 					/>
-					</Link>  
+					</Link>
 				)}
+				<Switch>
+					<Route path={`/:id(\\d+)`} component={VideoWrapper}/>
+				</Switch>
+				}
 					
 
 			</div>
@@ -139,14 +135,9 @@ class Selector extends Component {
 			componentClass = 'selector active';
 		}
 		return (
-				<div className={componentClass} onClick={this.props._handleClick.bind(this)}>
-
-				<div className="indice" >
-					<h2>{indice}</h2>
-				</div>
-
-				</div>
-				
+			<div className={componentClass} onClick={this.props._handleClick.bind(this)}>
+					<h2 className="indice">{indice}</h2>
+			</div>	
 		);
 	}
 }
