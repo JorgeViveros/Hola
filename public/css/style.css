@@ -1,0 +1,76 @@
+.video-js {
+  font-size: 10px;
+  color: #fff;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+  font-size: 3em;
+  color: rgba(0,0,0,0);
+  line-height: 2.2em;
+  height: 3.6em;
+  width: 3.6em;
+  border: 0.2em solid #fff;
+  /* 0.3em = 9px default */
+  border-radius: 1.8em;
+  /* Align center */
+  left: 50%;
+  top: 40%;
+  margin-left: -1.55em;
+  margin-top: -1.1em;
+  background-image: url("../img/logo-player.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: none !important; // @stylint ignore
+}
+
+.video-js:hover .vjs-control-bar,
+.video-js:hover .vjs-big-play-button,
+.video-js:hover .vjs-menu-button .vjs-menu-content {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.vjs-big-play-button,
+.vjs-big-play-button:focus {
+        outline: 0;
+        opacity: 0;
+
+        /* transition */
+        -webkit-transition: all 0s;
+        -moz-transition: all 0s;
+        -o-transition: all 0s;
+        transition: all 0s;
+}
+
+.video-js:hover .vjs-control-bar{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.video-js .vjs-slider {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+  background: rgba(0, 0, 0, 0);
+}
+
+.video-js .vjs-load-progress {
+  /* For IE8 we'll lighten the color */
+  background: #bfc7d3;
+  /* Otherwise we'll rely on stacked opacities */
+  background: rgba(115, 133, 159, 0.5);
+}
+
+.video-js .vjs-load-progress div {
+  /* For IE8 we'll lighten the color */
+  background: white;
+  /* Otherwise we'll rely on stacked opacities */
+  background: rgba(115, 133, 159, 0.75);
+}
